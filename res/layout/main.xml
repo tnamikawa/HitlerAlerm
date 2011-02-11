@@ -16,8 +16,34 @@
 		android:paddingTop="20px" android:layout_width="fill_parent"
 		android:layout_height="wrap_content" android:gravity="center_horizontal|top"
 		android:orientation="vertical">
-		<Spinner android:layout_height="wrap_content" android:id="@+id/spn_timer"
-			android:layout_width="wrap_content"></Spinner>
+		<TimePicker android:id="@+id/pick_timer"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"></TimePicker>
+
+		<LinearLayout android:id="@+id/LinearLayout03"
+			android:orientation="horizontal" android:paddingTop="20px"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:gravity="center">
+			<CheckBox android:text="Mon" android:id="@+id/monday"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"></CheckBox>
+			<CheckBox android:text="Tue" android:id="@+id/tuesday"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"></CheckBox>
+			<CheckBox android:text="Wed" android:id="@+id/wednesday"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"></CheckBox>
+			<CheckBox android:text="Thu" android:id="@+id/thursday"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"></CheckBox>
+		</LinearLayout>
+		<LinearLayout android:id="@+id/LinearLayout03"
+			android:orientation="horizontal" android:paddingTop="20px"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:gravity="center">
+			<CheckBox android:text="Fri" android:id="@+id/friday"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"></CheckBox>
+			<CheckBox android:text="Sat" android:id="@+id/saturday"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"></CheckBox>
+			<CheckBox android:text="Sun" android:id="@+id/sunday"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"></CheckBox>
+
+		</LinearLayout>
 	</LinearLayout>
 
 

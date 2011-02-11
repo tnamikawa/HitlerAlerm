@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="hello">Hello World, ConsolePanel!</string>
     <string name="app_name">HitlerAlerm</string>
-<string name="duty">健康は国民の義務である.</string>
-<string name="about1">この画面にたどりついた人はandroidの基本操作を知っているはずなので、操作説明は無用でしょう.</string>
-<string name="about2">見えている機能で全てです.</string>
+<string name="play">PLAY</string>
+<string name="about">ABOUT</string>
 </resources>

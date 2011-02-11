@@ -13,18 +13,27 @@ public final class R {
     public static final class drawable {
         public static final int bg=0x7f020000;
         public static final int icon=0x7f020001;
-        public static final int play=0x7f020002;
-        public static final int ringing=0x7f020003;
-        public static final int stop=0x7f020004;
-        public static final int stopped=0x7f020005;
+        public static final int info=0x7f020002;
+        public static final int play=0x7f020003;
+        public static final int ringing=0x7f020004;
+        public static final int stop=0x7f020005;
+        public static final int stopped=0x7f020006;
     }
     public static final class id {
         public static final int ImageView01=0x7f060001;
         public static final int LinearLayout01=0x7f060000;
         public static final int LinearLayout02=0x7f060002;
-        public static final int TextView01=0x7f060005;
-        public static final int btn_stop=0x7f060004;
-        public static final int spn_timer=0x7f060003;
+        public static final int LinearLayout03=0x7f060004;
+        public static final int TextView01=0x7f06000d;
+        public static final int btn_stop=0x7f06000c;
+        public static final int friday=0x7f060009;
+        public static final int monday=0x7f060005;
+        public static final int pick_timer=0x7f060003;
+        public static final int saturday=0x7f06000a;
+        public static final int sunday=0x7f06000b;
+        public static final int thursday=0x7f060008;
+        public static final int tuesday=0x7f060006;
+        public static final int wednesday=0x7f060007;
     }
     public static final class layout {
         public static final int main=0x7f030000;
@@ -35,10 +44,8 @@ public final class R {
         public static final int alarm=0x7f040000;
     }
     public static final class string {
-        public static final int about1=0x7f050003;
-        public static final int about2=0x7f050004;
-        public static final int app_name=0x7f050001;
-        public static final int duty=0x7f050002;
-        public static final int hello=0x7f050000;
+        public static final int about=0x7f050002;
+        public static final int app_name=0x7f050000;
+        public static final int play=0x7f050001;
     }
 }

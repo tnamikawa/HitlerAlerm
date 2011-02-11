@@ -1,11 +1,10 @@
 package asia.namikawa.hitleralerm;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class RingingPanel extends Activity implements View.OnClickListener {
+public class RingingPanel extends HitlerActivity implements View.OnClickListener {
   
   public void onCreate(Bundle icicle) {
     super.onCreate(icicle);
@@ -13,6 +12,10 @@ public class RingingPanel extends Activity implements View.OnClickListener {
     
     ImageButton btnStop = (ImageButton)findViewById(R.id.btn_stop);
     btnStop.setOnClickListener(this);
+    
+    initData();
+    loadData();
+    refreshAlarm();
     
     AlarmPlayer.start(this);
   }
@@ -24,5 +27,12 @@ public class RingingPanel extends Activity implements View.OnClickListener {
     }
     
     setContentView(R.layout.stopped);
+  }
+
+  @Override
+  protected void onPause() {
+    super.onPause();
+    if (AlarmPlayer.isJustStarted()) return;
+    AlarmPlayer.stop();
   }
 }
