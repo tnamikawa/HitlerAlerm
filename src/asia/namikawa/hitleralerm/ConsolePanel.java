@@ -19,47 +19,46 @@ public class ConsolePanel extends HitlerActivity implements TimePicker.OnTimeCha
     Log.i("ConsolePanel", "onCreate()");
     super.onCreate(savedInstanceState);
     requestWindowFeature(Window.FEATURE_NO_TITLE);
-
-    initData();
-    loadData();
-    Log.i("ConsolePanel", "current: " + hour + ":" + minute);
     
     setContentView(R.layout.main);
   }
 
   @Override
-  public void onContentChanged() {
-    Log.i("ConsolePanel", "onContentChanged()");
-    super.onContentChanged();
+  protected void onResume() {
+    Log.i("ConsolePanel", "onResume()");
+    super.onResume();
     
-
+    initData();
+    loadData();
+    
     TimePicker picker = (TimePicker) findViewById(R.id.pick_timer);
     picker.setCurrentHour(hour);
     picker.setCurrentMinute(minute);
-    picker.setOnTimeChangedListener(this);
 
     CheckBox sun, mon, tue, wed, thu, fri, sat;
     sun = (CheckBox) findViewById(R.id.sunday);
     sun.setChecked(weekdays.get(R.id.sunday));
-    sun.setOnCheckedChangeListener(this);
     mon = (CheckBox) findViewById(R.id.monday);
     mon.setChecked(weekdays.get(R.id.monday));
-    mon.setOnCheckedChangeListener(this);
     tue = (CheckBox) findViewById(R.id.tuesday);
     tue.setChecked(weekdays.get(R.id.tuesday));
-    tue.setOnCheckedChangeListener(this);
     wed = (CheckBox) findViewById(R.id.wednesday);
     wed.setChecked(weekdays.get(R.id.wednesday));
-    wed.setOnCheckedChangeListener(this);
     thu = (CheckBox) findViewById(R.id.thursday);
     thu.setChecked(weekdays.get(R.id.thursday));
-    thu.setOnCheckedChangeListener(this);
     fri = (CheckBox) findViewById(R.id.friday);
     fri.setChecked(weekdays.get(R.id.friday));
-    fri.setOnCheckedChangeListener(this);
     sat = (CheckBox) findViewById(R.id.saturday);
     sat.setChecked(weekdays.get(R.id.saturday));
+    
+    sun.setOnCheckedChangeListener(this);
+    mon.setOnCheckedChangeListener(this);
+    tue.setOnCheckedChangeListener(this);
+    wed.setOnCheckedChangeListener(this);
+    thu.setOnCheckedChangeListener(this);
+    fri.setOnCheckedChangeListener(this);
     sat.setOnCheckedChangeListener(this);
+    picker.setOnTimeChangedListener(this);
   }
 
   @Override

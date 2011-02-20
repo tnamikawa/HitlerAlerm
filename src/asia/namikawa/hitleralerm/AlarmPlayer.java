@@ -22,7 +22,7 @@ public class AlarmPlayer implements MediaPlayer.OnCompletionListener {
     alarmStartedAt = new Date();
   }
   
-  public static void stop() {
+  synchronized public static void stop() {
     if (null == player){ return; }
     player.stop();
     player = null;
