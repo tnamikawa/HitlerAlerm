@@ -19,8 +19,6 @@ public class ConsolePanel extends HitlerActivity implements TimePicker.OnTimeCha
     Log.i("ConsolePanel", "onCreate()");
     super.onCreate(savedInstanceState);
     requestWindowFeature(Window.FEATURE_NO_TITLE);
-    
-    setContentView(R.layout.main);
   }
 
   @Override
@@ -30,6 +28,8 @@ public class ConsolePanel extends HitlerActivity implements TimePicker.OnTimeCha
     
     initData();
     loadData();
+    
+    setContentView(R.layout.main);
     
     TimePicker picker = (TimePicker) findViewById(R.id.pick_timer);
     picker.setCurrentHour(hour);
